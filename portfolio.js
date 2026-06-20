@@ -1,6 +1,4 @@
-// ===========================
-// Mobile nav toggle
-// ===========================
+
 const navToggle = document.getElementById('navToggle');
 const navList = document.getElementById('navList');
 
@@ -18,9 +16,7 @@ navList.querySelectorAll('a').forEach(link => {
   });
 });
 
-// ===========================
-// Active link on scroll
-// ===========================
+
 const sections = document.querySelectorAll('main section[id]');
 const navLinks = document.querySelectorAll('.nav-link');
 
@@ -42,9 +38,7 @@ const setActiveLink = () => {
 window.addEventListener('scroll', setActiveLink, { passive: true });
 setActiveLink();
 
-// ===========================
-// Scroll reveal animation
-// ===========================
+
 const revealEls = document.querySelectorAll('.reveal');
 
 const revealObserver = new IntersectionObserver((entries) => {
@@ -58,9 +52,6 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealEls.forEach(el => revealObserver.observe(el));
 
-// ===========================
-// Back to top button
-// ===========================
 const backToTop = document.getElementById('backToTop');
 
 window.addEventListener('scroll', () => {
@@ -71,7 +62,5 @@ backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// ===========================
-// Footer year
-// ===========================
+
 document.getElementById('year').textContent = new Date().getFullYear();
